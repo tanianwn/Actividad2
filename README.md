@@ -92,3 +92,49 @@ T_{12} =
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
+---
+## A2 → A3
+
+### Descripción
+- Rotación alrededor del eje Z1 con ángulo θ2  
+- Traslación positiva de L2 sobre el eje Z1  
+
+### Matriz de rotación
+
+$$
+R_{23}=R_z(\theta_2)
+$$
+
+$$
+R_{23}=
+\begin{bmatrix}
+\cos\theta_2 & -\sin\theta_2 & 0 \\
+\sin\theta_2 & \cos\theta_2 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Vector de traslación
+
+$$
+P_{23}=
+\begin{bmatrix}
+0 \\
+0 \\
+L_2
+\end{bmatrix}
+$$
+
+### Matriz homogénea
+
+$$
+T_{23}=
+\begin{bmatrix}
+\cos\theta_2 & -\sin\theta_2 & 0 & 0 \\
+\sin\theta_2 & \cos\theta_2 & 0 & 0 \\
+0 & 0 & 1 & L_2 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+---
