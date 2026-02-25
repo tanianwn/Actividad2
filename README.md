@@ -92,7 +92,8 @@ T_{12} =
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
----
+
+
 ## A2 → A3
 
 ### Descripción
