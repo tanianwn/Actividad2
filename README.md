@@ -7,8 +7,8 @@ En esta actividad se desarrollan las matrices de transformación homogénea para
   <img src="https://github.com/user-attachments/assets/72890c84-a238-49ee-9bc2-f0c90c7b8267" width="600" alt="Robot 6GDL"/>
 </p>
 ---
-## A1 → A2
 
+## A1 → A2
 ### Descripción
 - Rotación positiva de 90° alrededor del eje Y
 - Rotación alrededor del eje Z con ángulo $\theta_1$
