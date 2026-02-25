@@ -1,108 +1,236 @@
-# Actividad2
+# Actividad 2
 
 ## A1 → A2
 
 ### Descripción
 - Rotación positiva de 90° alrededor del eje Y
-- Traslación positiva en el eje Z una distancia L0
+- Traslación positiva en el eje Z una distancia $L_0$
 
 ### Matriz de rotación en Y (forma general)
 
-Ry(θ) =
-[ cosθ   0   sinθ
-  0      1   0
- -sinθ   0   cosθ ]
+$$
+R_y(\theta)=
+\begin{bmatrix}
+\cos\theta & 0 & \sin\theta \\
+0 & 1 & 0 \\
+-\sin\theta & 0 & \cos\theta
+\end{bmatrix}
+$$
 
 ### Matriz de rotación en Z (forma general)
 
-Rz(θ) =
-[ cosθ  -sinθ   0
-  sinθ   cosθ   0
-  0      0      1 ]
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
 
 ### Multiplicación
 
-R = Ry(90°) Rz(θ)
+$$
+R = R_y(90^\circ) R_z(\theta)
+$$
+
+$$
+R =
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
 
 ### Resultado
 
+$$
 R =
-[ 0        0        1
-  sinθ     cosθ     0
- -cosθ     sinθ     0 ]
+\begin{bmatrix}
+0 & 0 & 1 \\
+\sin\theta & \cos\theta & 0 \\
+-\cos\theta & \sin\theta & 0
+\end{bmatrix}
+$$
+
+### Evaluación en $90^\circ$
+
+$$
+R_y(90^\circ) =
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{bmatrix}
+$$
 
 ### Vector de traslación
 
+$$
 P =
-[ 0
-  0
-  L0 ]
+\begin{bmatrix}
+0 \\
+0 \\
+L_0
+\end{bmatrix}
+$$
 
-### Matriz homogénea
+### Matriz de transformación homogénea
 
-T12 =
-[ 0        0        1      0
-  sinθ     cosθ     0      0
- -cosθ     sinθ     0      L0
-  0        0        0      1 ]
+$$
+T_{12} =
+\begin{bmatrix}
+0 & 0 & 1 & 0 \\
+\sin\theta & \cos\theta & 0 & 0 \\
+-\cos\theta & \sin\theta & 0 & L_0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
 
 ---
 
 ## A2 → A3
 
 ### Descripción
-- Rotación alrededor del eje Z1 con ángulo θ2
-- Traslación positiva de L2 sobre el eje Z1
+- Rotación alrededor del eje Z1 con ángulo $\theta_2$
+- Traslación positiva de $L_2$ sobre el eje Z1
 
 ### Matriz de rotación
 
-R23 =
-[ cosθ2  -sinθ2   0
-  sinθ2   cosθ2   0
-  0       0       1 ]
+$$
+R_{23}=R_z(\theta_2)
+$$
+
+$$
+R_{23}=
+\begin{bmatrix}
+\cos\theta_2 & -\sin\theta_2 & 0 \\
+\sin\theta_2 & \cos\theta_2 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
 
 ### Vector de traslación
 
+$$
 P =
-[ -L2 cosθ2
-  -L2 sinθ2
-   0 ]
+\begin{bmatrix}
+-L_2 \cos\theta_2 \\
+-L_2 \sin\theta_2 \\
+0
+\end{bmatrix}
+$$
 
 ### Matriz homogénea
 
-T23 =
-[ cosθ2  -sinθ2   0   -L2 cosθ2
-  sinθ2   cosθ2   0   -L2 sinθ2
-  0       0       1    0
-  0       0       0    1 ]
+$$
+T_{23}=
+\begin{bmatrix}
+\cos\theta_2 & -\sin\theta_2 & 0 & -L_2\cos\theta_2 \\
+\sin\theta_2 & \cos\theta_2 & 0 & -L_2\sin\theta_2 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
 
 ---
 
 ## A3 → A4
 
 ### Descripción
-- Rotación alrededor del eje Z2 con ángulo θ3
+- Rotación alrededor del eje Z2 con ángulo $\theta_3$
 - Rotación positiva de 90° alrededor del eje X2
-- Traslación negativa en XY en L3
+- Traslación negativa en XY en $L_3$
 
-### Matriz de rotación resultante
+### Matriz de rotación en Z (forma general)
 
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Matriz de rotación en X (forma general)
+
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+### Evaluación en $90^\circ$
+
+$$
+R_x(90^\circ)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+
+### Multiplicación
+
+$$
+R = R_z(\theta_3) R_x(90^\circ)
+$$
+
+$$
 R =
-[ cosθ3   0   sinθ3
-  sinθ3   0  -cosθ3
-  0       1   0 ]
+\begin{bmatrix}
+\cos\theta_3 & -\sin\theta_3 & 0 \\
+\sin\theta_3 & \cos\theta_3 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+
+### Resultado
+
+$$
+R =
+\begin{bmatrix}
+\cos\theta_3 & 0 & \sin\theta_3 \\
+\sin\theta_3 & 0 & -\cos\theta_3 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
 
 ### Vector de traslación
 
+$$
 P =
-[ -L3 sinθ3
-  -L3 cosθ3
-   0 ]
+\begin{bmatrix}
+- L_3 \sin\theta_3 \\
+- L_3 \cos\theta_3 \\
+0
+\end{bmatrix}
+$$
 
-### Matriz homogénea
+### Matriz de transformación homogénea
 
-T34 =
-[ cosθ3   0   sinθ3   -L3 sinθ3
-  sinθ3   0  -cosθ3   -L3 cosθ3
-  0       1   0        0
-  0       0   0        1 ]
+$$
+T_{34} =
+\begin{bmatrix}
+\cos\theta_3 & 0 & \sin\theta_3 & -L_3\sin\theta_3 \\
+\sin\theta_3 & 0 & -\cos\theta_3 & -L_3\cos\theta_3 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
