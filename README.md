@@ -87,8 +87,8 @@ $$
 T_{12} =
 \begin{bmatrix}
 0 & 0 & 1 & 0 \\
-0 & 1 & 0 & 0 \\
--1 & 0 & 0 & L_0 \\
+\sin\theta & \cos\theta & 0 & 0 \\
+-\cos\theta & \sin\theta & 0 & L_0 \\
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
