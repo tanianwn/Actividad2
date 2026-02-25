@@ -142,12 +142,9 @@ $$
 ## A3 → A4
 
 ### Descripción
-- Rotación alrededor del eje Z2 con ángulo \( \theta_3 \)  
+- Rotación alrededor del eje Z2 con ángulo θ3
 - Rotación positiva de 90° alrededor del eje X2  
-- Traslación proyectada negativa en el plano XY dependiente de \( \theta_3 \)  
-- No existe traslación en el eje Z  
-
-
+- Traslación negativa en XY en L3
 
 ### Matriz de rotación en Z (forma general)
 
