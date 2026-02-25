@@ -16,6 +16,17 @@ R_y(\theta)=
 \end{bmatrix}
 $$
 
+### Matriz de rotación en Z (forma general)
+
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
 ### Evaluación en \( 90^\circ \)
 
 $$
