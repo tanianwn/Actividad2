@@ -147,7 +147,7 @@ $$
 - Traslación proyectada negativa en el plano XY dependiente de \( \theta_3 \)  
 - No existe traslación en el eje Z  
 
----
+
 
 ### Matriz de rotación en Z (forma general)
 
@@ -160,7 +160,7 @@ R_z(\theta)=
 \end{bmatrix}
 $$
 
----
+
 
 ### Matriz de rotación en X (forma general)
 
@@ -173,7 +173,7 @@ R_x(\theta)=
 \end{bmatrix}
 $$
 
----
+
 
 ### Evaluación en \( 90^\circ \)
 
@@ -186,7 +186,7 @@ R_x(90^\circ)=
 \end{bmatrix}
 $$
 
----
+
 
 ### Multiplicación
 
@@ -208,7 +208,7 @@ R =
 \end{bmatrix}
 $$
 
----
+
 
 ### Resultado
 
@@ -221,7 +221,7 @@ R =
 \end{bmatrix}
 $$
 
----
+
 
 ### Vector de traslación
 
@@ -234,7 +234,7 @@ P =
 \end{bmatrix}
 $$
 
----
+
 
 ### Matriz de transformación homogénea
 
