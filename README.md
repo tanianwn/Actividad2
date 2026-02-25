@@ -305,8 +305,8 @@ $$
 P =
 \begin{bmatrix}
 0 \\
--L_4 \\
-0
+0 \\
+L_3
 \end{bmatrix}
 $$
 
