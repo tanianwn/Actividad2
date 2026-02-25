@@ -320,3 +320,79 @@ T_{45} =
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
+
+## A5 → A6
+### Descripción
+- Rotación negativa de -90° alrededor del eje Z4
+- Traslación positiva en el eje Y en $L_5$
+- Traslación negativa en el eje X en $L_5$
+
+### Matriz de rotación en Z (forma general)
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Evaluación en $-90^\circ$
+$$
+R_z(-90^\circ)=
+\begin{bmatrix}
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Multiplicación
+$$
+R = R_z(-90^\circ) R_z(\theta_5)
+$$
+
+$$
+R =
+\begin{bmatrix}
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta_5 & -\sin\theta_5 & 0 \\
+\sin\theta_5 & \cos\theta_5 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Resultado
+$$
+R =
+\begin{bmatrix}
+\sin\theta_5 & \cos\theta_5 & 0 \\
+-\cos\theta_5 & \sin\theta_5 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Vector de traslación
+$$
+P =
+\begin{bmatrix}
+-L_5\sin\theta_5 \\
+L_5\cos\theta_5 \\
+0
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+$$
+T_{56} =
+\begin{bmatrix}
+\sin\theta_5 & \cos\theta_5 & 0 & -L_5\sin\theta_5 \\
+-\cos\theta_5 & \sin\theta_5 & 0 & L_5\cos\theta_5 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
