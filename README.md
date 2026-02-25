@@ -323,9 +323,20 @@ $$
 
 ## A5 → A6
 ### Descripción
-- Rotación negativa de -90° alrededor del eje Z4
+- Rotación negativa de -90° alrededor del eje X4
+- Rotación alrededor del eje Z4 con ángulo $\theta_5$
 - Traslación positiva en el eje Y en $L_5$
 - Traslación negativa en el eje X en $L_5$
+
+### Matriz de rotación en X (forma general)
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
 
 ### Matriz de rotación en Z (forma general)
 $$
@@ -339,25 +350,25 @@ $$
 
 ### Evaluación en $-90^\circ$
 $$
-R_z(-90^\circ)=
+R_x(-90^\circ)=
 \begin{bmatrix}
-0 & 1 & 0 \\
--1 & 0 & 0 \\
-0 & 0 & 1
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
 \end{bmatrix}
 $$
 
 ### Multiplicación
 $$
-R = R_z(-90^\circ) R_z(\theta_5)
+R = R_x(-90^\circ) R_z(\theta_5)
 $$
 
 $$
 R =
 \begin{bmatrix}
-0 & 1 & 0 \\
--1 & 0 & 0 \\
-0 & 0 & 1
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
 \end{bmatrix}
 \begin{bmatrix}
 \cos\theta_5 & -\sin\theta_5 & 0 \\
@@ -370,9 +381,9 @@ $$
 $$
 R =
 \begin{bmatrix}
-\sin\theta_5 & \cos\theta_5 & 0 \\
--\cos\theta_5 & \sin\theta_5 & 0 \\
-0 & 0 & 1
+\cos\theta_5 & -\sin\theta_5 & 0 \\
+0 & 0 & 1 \\
+-\sin\theta_5 & -\cos\theta_5 & 0
 \end{bmatrix}
 $$
 
@@ -390,9 +401,9 @@ $$
 $$
 T_{56} =
 \begin{bmatrix}
-\sin\theta_5 & \cos\theta_5 & 0 & -L_5\sin\theta_5 \\
--\cos\theta_5 & \sin\theta_5 & 0 & L_5\cos\theta_5 \\
-0 & 0 & 1 & 0 \\
+\cos\theta_5 & -\sin\theta_5 & 0 & -L_5\sin\theta_5 \\
+0 & 0 & 1 & L_5\cos\theta_5 \\
+-\sin\theta_5 & -\cos\theta_5 & 0 & 0 \\
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
