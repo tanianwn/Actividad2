@@ -118,15 +118,12 @@ $$
 ### Vector de traslación
 
 $$
-x = L_2 \cos\theta_2
-$$
-
-$$
-y = L_2 \sin\theta_2
-$$
-
-$$
-z = 0
+P =
+\begin{bmatrix}
+L_2 \cos\theta_2 \\
+L_2 \sin\theta_2 \\
+0
+\end{bmatrix}
 $$
 
 ### Matriz homogénea
