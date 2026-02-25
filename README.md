@@ -1,4 +1,5 @@
 # Actividad2
+
 ## A1 → A2
 
 ### Descripción
@@ -28,6 +29,7 @@ R_z(\theta)=
 $$
 
 ### Multiplicación
+
 $$
 R = R_y(90^\circ)\,R_z(\theta)
 $$
@@ -68,7 +70,6 @@ R_y(90^\circ) =
 \end{bmatrix}
 $$
 
-
 ### Vector de traslación
 
 $$
@@ -79,7 +80,6 @@ P =
 L_0
 \end{bmatrix}
 $$
-
 
 ### Matriz de transformación homogénea
 
@@ -93,12 +93,13 @@ T_{12} =
 \end{bmatrix}
 $$
 
+---
 
 ## A2 → A3
 
 ### Descripción
-- Rotación alrededor del eje Z1 con ángulo θ2  
-- Traslación positiva de L2 sobre el eje Z1  
+- Rotación alrededor del eje Z1 con ángulo \( \theta_2 \)  
+- Traslación positiva de \( L_2 \) sobre el eje Z1  
 
 ### Matriz de rotación
 
@@ -120,13 +121,14 @@ $$
 $$
 P =
 \begin{bmatrix}
--L_2 \cos\theta_2 \\
--L_2 \sin\theta_2 \\
+- L_2 \cos\theta_2 \\
+- L_2 \sin\theta_2 \\
 0
 \end{bmatrix}
 $$
 
 ### Matriz homogénea
+
 $$
 T_{23}=
 \begin{bmatrix}
@@ -142,9 +144,9 @@ $$
 ## A3 → A4
 
 ### Descripción
-- Rotación alrededor del eje Z2 con ángulo θ3
+- Rotación alrededor del eje Z2 con ángulo \( \theta_3 \)  
 - Rotación positiva de 90° alrededor del eje X2  
-- Traslación negativa en XY en L3
+- Traslación negativa en XY en \( L_3 \)
 
 ### Matriz de rotación en Z (forma general)
 
@@ -157,8 +159,6 @@ R_z(\theta)=
 \end{bmatrix}
 $$
 
-
-
 ### Matriz de rotación en X (forma general)
 
 $$
@@ -170,8 +170,6 @@ R_x(\theta)=
 \end{bmatrix}
 $$
 
-
-
 ### Evaluación en \( 90^\circ \)
 
 $$
@@ -182,8 +180,6 @@ R_x(90^\circ)=
 0 & 1 & 0
 \end{bmatrix}
 $$
-
-
 
 ### Multiplicación
 
@@ -205,8 +201,6 @@ R =
 \end{bmatrix}
 $$
 
-
-
 ### Resultado
 
 $$
@@ -218,8 +212,6 @@ R =
 \end{bmatrix}
 $$
 
-
-
 ### Vector de traslación
 
 $$
@@ -230,8 +222,6 @@ P =
 0
 \end{bmatrix}
 $$
-
-
 
 ### Matriz de transformación homogénea
 
