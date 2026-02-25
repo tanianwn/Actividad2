@@ -120,8 +120,8 @@ $$
 $$
 P =
 \begin{bmatrix}
-L_2 \cos\theta_2 \\
-L_2 \sin\theta_2 \\
+-L_2 \cos\theta_2 \\
+-L_2 \sin\theta_2 \\
 0
 \end{bmatrix}
 $$
@@ -130,8 +130,8 @@ $$
 $$
 T_{23}=
 \begin{bmatrix}
-\cos\theta_2 & -\sin\theta_2 & 0 & L_2\cos\theta_2 \\
-\sin\theta_2 & \cos\theta_2 & 0 & L_2\sin\theta_2 \\
+\cos\theta_2 & -\sin\theta_2 & 0 & -L_2\cos\theta_2 \\
+\sin\theta_2 & \cos\theta_2 & 0 & -L_2\sin\theta_2 \\
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1
 \end{bmatrix}
