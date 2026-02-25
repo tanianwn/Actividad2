@@ -60,7 +60,7 @@ $$
 ### Evaluación en \( 90^\circ \)
 
 $$
-R_y(90^\circ\) =
+R_y(90^\circ) =
 \begin{bmatrix}
 0 & 0 & 1 \\
 0 & 1 & 0 \\
