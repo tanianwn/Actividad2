@@ -118,12 +118,15 @@ $$
 ### Vector de traslación
 
 $$
-P_{23}=
-\begin{bmatrix}
-0 \\
-0 \\
-L_2
-\end{bmatrix}
+x = L_2 \cos\theta_2
+$$
+
+$$
+y = L_2 \sin\theta_2
+$$
+
+$$
+z = 0
 $$
 
 ### Matriz homogénea
