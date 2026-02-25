@@ -138,17 +138,44 @@ T_{23}=
 $$
 
 ---
-
+# Actividad2
 ## A3 → A4
 
 ### Descripción
-- Rotación alrededor del eje Z2 con ángulo θ3  
+- Rotación alrededor del eje Z2 con ángulo \( \theta_3 \)  
 - Rotación positiva de 90° alrededor del eje X2  
-- Traslación negativa en el plano XY en L3  
+- Traslación proyectada negativa en el plano XY dependiente de \( \theta_3 \)  
+- No existe traslación en el eje Z  
 
+---
 
+### Matriz de rotación en Z (forma general)
 
-### Matriz de rotación en X (evaluada en 90°)
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+---
+
+### Matriz de rotación en X (forma general)
+
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+---
+
+### Evaluación en \( 90^\circ \)
 
 $$
 R_x(90^\circ)=
@@ -159,16 +186,34 @@ R_x(90^\circ)=
 \end{bmatrix}
 $$
 
+---
 
-
-### Rotación total
-
-$$
-R_{34}=R_z(\theta_3)R_x(90^\circ)
-$$
+### Multiplicación
 
 $$
-R_{34}=
+R = R_z(\theta_3)\,R_x(90^\circ)
+$$
+
+$$
+R =
+\begin{bmatrix}
+\cos\theta_3 & -\sin\theta_3 & 0 \\
+\sin\theta_3 & \cos\theta_3 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+
+---
+
+### Resultado
+
+$$
+R =
 \begin{bmatrix}
 \cos\theta_3 & 0 & \sin\theta_3 \\
 \sin\theta_3 & 0 & -\cos\theta_3 \\
@@ -176,12 +221,12 @@ R_{34}=
 \end{bmatrix}
 $$
 
+---
 
-
-### Vector de traslación proyectado
+### Vector de traslación
 
 $$
-P_{34}=
+P =
 \begin{bmatrix}
 - L_3 \sin\theta_3 \\
 - L_3 \cos\theta_3 \\
@@ -189,12 +234,12 @@ P_{34}=
 \end{bmatrix}
 $$
 
+---
 
-
-### Matriz homogénea
+### Matriz de transformación homogénea
 
 $$
-T_{34}=
+T_{34} =
 \begin{bmatrix}
 \cos\theta_3 & 0 & \sin\theta_3 & -L_3\sin\theta_3 \\
 \sin\theta_3 & 0 & -\cos\theta_3 & -L_3\cos\theta_3 \\
@@ -202,5 +247,3 @@ T_{34}=
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
-
-
