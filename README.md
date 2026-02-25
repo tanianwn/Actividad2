@@ -234,3 +234,89 @@ T_{34} =
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
+
+## A4 → A5
+### Descripción
+- Rotación positiva de 90° alrededor del eje X3
+- Rotación alrededor del eje Z3 con ángulo $\theta_4$
+- Traslación positiva en el eje Z en $L_4$
+
+### Matriz de rotación en X (forma general)
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+### Matriz de rotación en Z (forma general)
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Evaluación en $90^\circ$
+$$
+R_x(90^\circ)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+
+### Multiplicación
+$$
+R = R_x(90^\circ) R_z(\theta_4)
+$$
+
+$$
+R =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta_4 & -\sin\theta_4 & 0 \\
+\sin\theta_4 & \cos\theta_4 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Resultado
+$$
+R =
+\begin{bmatrix}
+\cos\theta_4 & -\sin\theta_4 & 0 \\
+0 & 0 & -1 \\
+\sin\theta_4 & \cos\theta_4 & 0
+\end{bmatrix}
+$$
+
+### Vector de traslación
+$$
+P =
+\begin{bmatrix}
+0 \\
+-L_4 \\
+0
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+$$
+T_{45} =
+\begin{bmatrix}
+\cos\theta_4 & -\sin\theta_4 & 0 & 0 \\
+0 & 0 & -1 & -L_4 \\
+\sin\theta_4 & \cos\theta_4 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
