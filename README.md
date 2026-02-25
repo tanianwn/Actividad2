@@ -4,6 +4,7 @@
 
 ### Descripción
 - Rotación positiva de 90° alrededor del eje Y
+- Rotación alrededor del eje Z con ángulo $\theta_1$
 - Traslación positiva en el eje Z una distancia $L_0$
 
 ### Matriz de rotación en Y (forma general)
@@ -31,7 +32,7 @@ $$
 ### Multiplicación
 
 $$
-R = R_y(90^\circ) R_z(\theta)
+R = R_y(90^\circ) R_z(\theta_1)
 $$
 
 $$
@@ -42,8 +43,8 @@ R =
 -1 & 0 & 0
 \end{bmatrix}
 \begin{bmatrix}
-\cos\theta & -\sin\theta & 0 \\
-\sin\theta & \cos\theta & 0 \\
+\cos\theta_1 & -\sin\theta_1 & 0 \\
+\sin\theta_1 & \cos\theta_1 & 0 \\
 0 & 0 & 1
 \end{bmatrix}
 $$
@@ -54,8 +55,8 @@ $$
 R =
 \begin{bmatrix}
 0 & 0 & 1 \\
-\sin\theta & \cos\theta & 0 \\
--\cos\theta & \sin\theta & 0
+\sin\theta_1 & \cos\theta_1 & 0 \\
+-\cos\theta_1 & \sin\theta_1 & 0
 \end{bmatrix}
 $$
 
@@ -87,8 +88,8 @@ $$
 T_{12} =
 \begin{bmatrix}
 0 & 0 & 1 & 0 \\
-\sin\theta & \cos\theta & 0 & 0 \\
--\cos\theta & \sin\theta & 0 & L_0 \\
+\sin\theta_1 & \cos\theta_1 & 0 & 0 \\
+-\cos\theta_1 & \sin\theta_1 & 0 & L_0 \\
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
@@ -101,7 +102,18 @@ $$
 - Rotación alrededor del eje Z1 con ángulo $\theta_2$
 - Traslación positiva de $L_2$ sobre el eje Z1
 
-### Matriz de rotación
+### Matriz de rotación en Z (forma general)
+
+$$
+R_z(\theta)=
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Resultado
 
 $$
 R_{23}=R_z(\theta_2)
@@ -127,7 +139,7 @@ P =
 \end{bmatrix}
 $$
 
-### Matriz homogénea
+### Matriz de transformación homogénea
 
 $$
 T_{23}=
@@ -217,8 +229,8 @@ $$
 $$
 P =
 \begin{bmatrix}
-- L_3 \sin\theta_3 \\
-- L_3 \cos\theta_3 \\
+-L_3\sin\theta_3 \\
+-L_3\cos\theta_3 \\
 0
 \end{bmatrix}
 $$
@@ -235,13 +247,17 @@ T_{34} =
 \end{bmatrix}
 $$
 
+---
+
 ## A4 → A5
+
 ### Descripción
 - Rotación positiva de 90° alrededor del eje X3
 - Rotación alrededor del eje Z3 con ángulo $\theta_4$
 - Traslación positiva en el eje Z en $L_4$
 
 ### Matriz de rotación en X (forma general)
+
 $$
 R_x(\theta)=
 \begin{bmatrix}
@@ -252,6 +268,7 @@ R_x(\theta)=
 $$
 
 ### Matriz de rotación en Z (forma general)
+
 $$
 R_z(\theta)=
 \begin{bmatrix}
@@ -262,6 +279,7 @@ R_z(\theta)=
 $$
 
 ### Evaluación en $90^\circ$
+
 $$
 R_x(90^\circ)=
 \begin{bmatrix}
@@ -272,6 +290,7 @@ R_x(90^\circ)=
 $$
 
 ### Multiplicación
+
 $$
 R = R_x(90^\circ) R_z(\theta_4)
 $$
@@ -291,6 +310,7 @@ R =
 $$
 
 ### Resultado
+
 $$
 R =
 \begin{bmatrix}
@@ -301,6 +321,7 @@ R =
 $$
 
 ### Vector de traslación
+
 $$
 P =
 \begin{bmatrix}
@@ -311,6 +332,7 @@ L_4
 $$
 
 ### Matriz de transformación homogénea
+
 $$
 T_{45} =
 \begin{bmatrix}
@@ -321,7 +343,10 @@ T_{45} =
 \end{bmatrix}
 $$
 
+---
+
 ## A5 → A6
+
 ### Descripción
 - Rotación negativa de -90° alrededor del eje X4
 - Rotación alrededor del eje Z4 con ángulo $\theta_5$
@@ -329,6 +354,7 @@ $$
 - Traslación negativa en el eje X en $L_5$
 
 ### Matriz de rotación en X (forma general)
+
 $$
 R_x(\theta)=
 \begin{bmatrix}
@@ -339,6 +365,7 @@ R_x(\theta)=
 $$
 
 ### Matriz de rotación en Z (forma general)
+
 $$
 R_z(\theta)=
 \begin{bmatrix}
@@ -349,6 +376,7 @@ R_z(\theta)=
 $$
 
 ### Evaluación en $-90^\circ$
+
 $$
 R_x(-90^\circ)=
 \begin{bmatrix}
@@ -359,6 +387,7 @@ R_x(-90^\circ)=
 $$
 
 ### Multiplicación
+
 $$
 R = R_x(-90^\circ) R_z(\theta_5)
 $$
@@ -378,6 +407,7 @@ R =
 $$
 
 ### Resultado
+
 $$
 R =
 \begin{bmatrix}
@@ -388,6 +418,7 @@ R =
 $$
 
 ### Vector de traslación
+
 $$
 P =
 \begin{bmatrix}
@@ -398,6 +429,7 @@ L_5\cos\theta_5 \\
 $$
 
 ### Matriz de transformación homogénea
+
 $$
 T_{56} =
 \begin{bmatrix}
