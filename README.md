@@ -1,6 +1,6 @@
 # Actividad 2
 <p align="center">
-  <img src="img/6GDL_robot1.JPG" width="600" alt="Robot 6GDL - Sistemas de referencia"/>
+  <img src="https://github.com/user-attachments/assets/72890c84-a238-49ee-9bc2-f0c90c7b8267" width="600" alt="Robot 6GDL"/>
 </p>
 
 ## A1 → A2
