@@ -27,6 +27,36 @@ R_z(\theta)=
 \end{bmatrix}
 $$
 
+### Multiplicación
+$$
+R = R_y(90^\circ)\,R_z(\theta)
+$$
+
+$$
+R =
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Resultado
+
+$$
+R =
+\begin{bmatrix}
+0 & 0 & 1 \\
+\sin\theta & \cos\theta & 0 \\
+-\cos\theta & \sin\theta & 0
+\end{bmatrix}
+$$
+
 ### Evaluación en \( 90^\circ \)
 
 $$
