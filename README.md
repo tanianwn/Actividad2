@@ -138,7 +138,7 @@ T_{23}=
 $$
 
 ---
-# Actividad2
+
 ## A3 → A4
 
 ### Descripción
