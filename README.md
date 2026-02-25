@@ -5,8 +5,6 @@
 - Rotación positiva de 90° alrededor del eje Y  
 - Traslación positiva en el eje Z una distancia \( L_0 \)
 
----
-
 ### Matriz de rotación en Y (forma general)
 
 $$
@@ -17,8 +15,6 @@ R_y(\theta)=
 -\sin\theta & 0 & \cos\theta
 \end{bmatrix}
 $$
-
----
 
 ### Evaluación en \( 90^\circ \)
 
@@ -31,7 +27,6 @@ R_y(90^\circ)=
 \end{bmatrix}
 $$
 
----
 
 ### Vector de traslación
 
@@ -44,7 +39,6 @@ L_0
 \end{bmatrix}
 $$
 
----
 
 ### Matriz de transformación homogénea
 
