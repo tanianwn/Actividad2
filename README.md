@@ -1,4 +1,7 @@
 # Actividad 2
+<p align="center">
+  <img src="img/6GDL_robot1.JPG" width="600" alt="Robot 6GDL - Sistemas de referencia"/>
+</p>
 
 ## A1 → A2
 
