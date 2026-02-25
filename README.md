@@ -315,8 +315,8 @@ $$
 T_{45} =
 \begin{bmatrix}
 \cos\theta_4 & -\sin\theta_4 & 0 & 0 \\
-0 & 0 & -1 & -L_4 \\
+0 & 0 & -1 & 0 \\
 \sin\theta_4 & \cos\theta_4 & 0 & 0 \\
-0 & 0 & 0 & 1
+0 & 0 & L_3 & 1
 \end{bmatrix}
 $$
