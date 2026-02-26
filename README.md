@@ -3,7 +3,7 @@
 # Robot 1
 
 ## Descripción
-En esta actividad se desarrollan las matrices de transformación homogénea para un robot de 6 grados de libertad (6GDL). Cada transformación describe el cambio de sistema de referencia entre articulaciones consecutivas, combinando rotaciones y traslaciones en una sola matriz $T \in \mathbb{R}^{4 \times 4}$.
+En esta actividad se desarrollan las matrices de transformación homogénea para dos robots de 6 grados de libertad (6GDL). Cada transformación describe el cambio de sistema de referencia entre articulaciones consecutivas, combinando rotaciones y traslaciones en una sola matriz $T \in \mathbb{R}^{4 \times 4}$.
 
 ## Robot 6GDL - Sistemas de referencia
 <p align="center">
@@ -451,6 +451,10 @@ T_{56} =
 $$
 
 # Robot 2
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/49d448e1-d454-4c7c-9983-b5ffbce02dd7" width="600" alt="ROBOT26GDL"/>
+</p>
+
 
 ## A1 → A2
 
