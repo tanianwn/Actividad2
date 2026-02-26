@@ -1,4 +1,7 @@
 # Actividad 2
+
+# Robot 1
+
 ## Descripción
 En esta actividad se desarrollan las matrices de transformación homogénea para un robot de 6 grados de libertad (6GDL). Cada transformación describe el cambio de sistema de referencia entre articulaciones consecutivas, combinando rotaciones y traslaciones en una sola matriz $T \in \mathbb{R}^{4 \times 4}$.
 
@@ -443,6 +446,307 @@ T_{56} =
 \cos\theta_5 & -\sin\theta_5 & 0 & -L_5\sin\theta_5 \\
 0 & 0 & 1 & L_5\cos\theta_5 \\
 -\sin\theta_5 & -\cos\theta_5 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+# Robot 2
+
+## A1 → A2
+
+### Descripción
+- Rotación positiva de 90° alrededor del eje Y0
+- Traslación positiva de $L_1$ sobre el eje Z0
+
+### Matriz de rotación en Y (forma general)
+
+$$
+R_y(\theta)=
+\begin{bmatrix}
+\cos\theta & 0 & \sin\theta \\
+0 & 1 & 0 \\
+-\sin\theta & 0 & \cos\theta
+\end{bmatrix}
+$$
+
+### Evaluación en $90^\circ$
+
+$$
+R_y(90^\circ)=
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{bmatrix}
+$$
+
+### Resultado
+
+$$
+R_{12} = R_y(90^\circ) =
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{bmatrix}
+$$
+
+### Vector de traslación
+
+$$
+P =
+\begin{bmatrix}
+0 \\
+0 \\
+L_1
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+
+$$
+T_{12} =
+\begin{bmatrix}
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+-1 & 0 & 0 & L_1 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+---
+
+## A2 → A3
+
+### Descripción
+- No existe rotación
+- Traslación negativa de $L_2\cos\theta_2$ sobre el eje Y1
+- Traslación negativa de $L_2\sin\theta_2$ sobre el eje X1
+
+### Resultado
+
+$$
+R_{23} = I =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+### Vector de traslación
+
+$$
+P =
+\begin{bmatrix}
+-L_2\sin\theta_2 \\
+-L_2\cos\theta_2 \\
+0
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+
+$$
+T_{23} =
+\begin{bmatrix}
+1 & 0 & 0 & -L_2\sin\theta_2 \\
+0 & 1 & 0 & -L_2\cos\theta_2 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+---
+
+## A3 → A4
+
+### Descripción
+- Rotación negativa de -90° alrededor del eje X2
+- Traslación positiva de $L_3\cos\theta_3$ sobre el eje Y2
+- Traslación positiva de $L_3\sin\theta_3$ sobre el eje X2
+
+### Matriz de rotación en X (forma general)
+
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+### Evaluación en $-90^\circ$
+
+$$
+R_x(-90^\circ)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{bmatrix}
+$$
+
+### Resultado
+
+$$
+R_{34} = R_x(-90^\circ) =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{bmatrix}
+$$
+
+### Vector de traslación
+
+$$
+P =
+\begin{bmatrix}
+L_3\sin\theta_3 \\
+L_3\cos\theta_3 \\
+0
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+
+$$
+T_{34} =
+\begin{bmatrix}
+1 & 0 & 0 & L_3\sin\theta_3 \\
+0 & 0 & 1 & L_3\cos\theta_3 \\
+0 & -1 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+---
+
+## A4 → A5
+
+### Descripción
+- Rotación positiva de 90° alrededor del eje X3
+- Traslación positiva de $L_4$ sobre el eje Z3
+
+### Matriz de rotación en X (forma general)
+
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+### Evaluación en $90^\circ$
+
+$$
+R_x(90^\circ)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+
+### Resultado
+
+$$
+R_{45} = R_x(90^\circ) =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
+\end{bmatrix}
+$$
+
+### Vector de traslación
+
+$$
+P =
+\begin{bmatrix}
+0 \\
+0 \\
+L_4
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+
+$$
+T_{45} =
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 1 & 0 & L_4 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+---
+
+## A5 → A6
+
+### Descripción
+- Rotación negativa de -90° alrededor del eje X4
+- Traslación positiva de $L_5\cos\theta_5$ sobre el eje Y4
+- Traslación positiva de $L_5\sin\theta_5$ sobre el eje X4
+
+### Matriz de rotación en X (forma general)
+
+$$
+R_x(\theta)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta \\
+0 & \sin\theta & \cos\theta
+\end{bmatrix}
+$$
+
+### Evaluación en $-90^\circ$
+
+$$
+R_x(-90^\circ)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{bmatrix}
+$$
+
+### Resultado
+
+$$
+R_{56} = R_x(-90^\circ) =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{bmatrix}
+$$
+
+### Vector de traslación
+
+$$
+P =
+\begin{bmatrix}
+L_5\sin\theta_5 \\
+L_5\cos\theta_5 \\
+0
+\end{bmatrix}
+$$
+
+### Matriz de transformación homogénea
+
+$$
+T_{56} =
+\begin{bmatrix}
+1 & 0 & 0 & L_5\sin\theta_5 \\
+0 & 0 & 1 & L_5\cos\theta_5 \\
+0 & -1 & 0 & 0 \\
 0 & 0 & 0 & 1
 \end{bmatrix}
 $$
