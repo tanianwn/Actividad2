@@ -36,6 +36,17 @@ R_z(\theta)=
 \end{bmatrix}
 $$
 
+### Evaluación en $90^\circ$
+
+$$
+R_y(90^\circ) =
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+-1 & 0 & 0
+\end{bmatrix}
+$$
+
 ### Multiplicación
 
 $$
@@ -64,17 +75,6 @@ R =
 0 & 0 & 1 \\
 \sin\theta_1 & \cos\theta_1 & 0 \\
 -\cos\theta_1 & \sin\theta_1 & 0
-\end{bmatrix}
-$$
-
-### Evaluación en $90^\circ$
-
-$$
-R_y(90^\circ) =
-\begin{bmatrix}
-0 & 0 & 1 \\
-0 & 1 & 0 \\
--1 & 0 & 0
 \end{bmatrix}
 $$
 
