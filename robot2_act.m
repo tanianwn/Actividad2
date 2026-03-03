@@ -31,6 +31,9 @@ pretty (Qp);
 GDL= size(RP,2);
 GDL_str= num2str(GDL);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+R = sym(zeros(3,3,GDL));
+P = sym(zeros(3,1,GDL));
+
 
 %SECCIÓN 6
 %Junta 1
